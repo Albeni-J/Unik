@@ -154,6 +154,26 @@ for( let i = 0; i < a1.length; i++) {
             ans.push(a1[i]);
         }
     }
+
+
+
+
+
+
+
+
+6 задание удаление значений с массива в пройзвольном порядке
+let a = [1 , 2 , 4 , 6 , 7 , 8 , 9 , 10];
+
+let index = prompt();
+
+function deleteBlock(a,index){
+  for(let i = a.length-1; i > index; i--){
+    a.pop(i) 
+  }
+}
+deleteBlock(a, index);
+console.log(a);
 }
 
 alert(ans);

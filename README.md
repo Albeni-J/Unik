@@ -177,3 +177,27 @@ console.log(a);
 }
 
 alert(ans);
+7 заданаие
+function isPrime(number) {
+    if (number <= 1) {
+        return false; //
+    }
+    for (let i = 2; i * i <= number; i++) {
+        if (number % i === 0) {
+            return false; 
+        }
+    }
+    return true;
+}
+
+// Эта функция удаляет простые числа из входного массива.
+function removePrimes(Array) {
+    return Array.filter(element => !isPrime(element));
+    // Метод filter создает новый массив, содержащий только элементы, для которых возвращает true.
+}
+
+//const ключевое слово языка для объявления констант
+const inputArray = [];
+const resultArray = removePrimes(inputArray);
+
+console.log( resultArray);

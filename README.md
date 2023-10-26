@@ -201,3 +201,75 @@ const inputArray = [];
 const resultArray = removePrimes(inputArray);
 
 console.log( resultArray);
+
+
+
+
+
+
+
+Лаб 2
+
+
+
+
+class Node {
+  val = 0; 
+  next = 0;
+
+  constructor(val) {
+    this.val = val;
+  }
+}
+
+class LinkedList {
+  head = 0;
+
+  addAtHead(val) {
+    const newNode = new Node(val);
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+
+  print() {
+    let current = this.head;
+    const values = [];
+    while (current) {
+      values.push(current.val);
+      current = current.next;
+    }
+    console.log(values.join(' '));
+  }
+
+  reverse() {
+    let prev = 0;
+    let current = this.head;
+    let next = 0;
+
+    while (current) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+
+    this.head = prev;
+  }
+}
+
+const linkedList = new LinkedList();
+linkedList.addAtHead("right now");
+linkedList.addAtHead("working");
+linkedList.addAtHead("Im");
+linkedList.addAtHead("right now");
+linkedList.addAtHead("working");
+linkedList.addAtHead("Im");
+
+console.log("Правильный");
+linkedList.print();
+
+linkedList.reverse();
+
+console.log("Наоборот");
+linkedList.print();
+
